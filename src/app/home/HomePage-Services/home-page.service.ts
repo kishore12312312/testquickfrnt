@@ -31,7 +31,7 @@ export class HomePageService {
     pay={cardNumber:CardNumber1,CVV:cvv1,Expiry:ex,ProdCost:cost,ProdID:pid}
     console.log(pay)
 
-    let tempVar = this.http.post<boolean>('http://localhost:7181/api/PaymentFunction',pay)
+    let tempVar = this.http.post<boolean>('https://capstone-apps.azurewebsites.net/api/PaymentService?code=zQeazObe18ALF76x7hL0MbfvOq7X5tcuawS_dPyL5gDrAzFuN4sXmQ==',pay)
     return tempVar
   }
 
