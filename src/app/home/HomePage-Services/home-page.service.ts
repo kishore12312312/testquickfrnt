@@ -51,7 +51,7 @@ export class HomePageService {
     user={emailID:userEmailID, password:userPassword,usertype:type};
     console.log(user)
 
-    let result=this.http.post<number>('https://login-service-qk.azurewebsites.net/api/LoginFunction?code=bVFKz69iYgDhe0W34IRoIn8S9FAoV_nWo-hHOY34OpvhAzFuULBixw==',user)
+    let result=this.http.post<number>('https://capstone-apps.azurewebsites.net/api/LoginFunction?code=cyRol85w+5hwWtTE3td1ZMQLlzBzq1FUAoVMSFXge5yPYUKgS5TBjg==&clientId=apim-CapstoneApi',user)
     return result
 
   }
