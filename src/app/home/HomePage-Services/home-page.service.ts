@@ -78,7 +78,7 @@ export class User{
   password:string='';
   usertype:string='';
 
-
+ 
 }
 
 export class Payment{
