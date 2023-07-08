@@ -20,7 +20,7 @@ export class HomePageService {
 
   //Getting the Products from backend API
   getProducts():Observable<IProduct[]>{
-    let tempVar = this.http.get<IProduct[]>('https://quickkart-backend.azurewebsites.net/api/home/getproducts')
+    let tempVar = this.http.get<IProduct[]>('https://localhost:5001/api/home/getproducts')
     console.log(tempVar)
     return tempVar
   }
@@ -51,7 +51,7 @@ export class HomePageService {
     user={emailID:userEmailID, password:userPassword,usertype:type};
     console.log(user)
 
-    let result=this.http.post<number>('https://capstone-apps.azurewebsites.net/api/LoginFunction?code=waUetAEUOuEuLG5ofDOhnnG8NFAOzvc8CgqRvYqIlQJuAzFulhps5g==',user)
+    let result=this.http.post<number>('http://localhost:7247/api/LoginFunction',user)
     return result
 
   }
